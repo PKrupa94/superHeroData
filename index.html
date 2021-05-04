@@ -1,0 +1,347 @@
+<!doctype html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+<body>
+    <!-- Header div -->
+    <div>
+    <div class="page-header superhero-header">
+      <h1 style="font-weight: bold;">SUPERHEROES</h1>
+    </div>
+      <!-- Main div -->
+      <div class="row">
+        <!-- sideBar div -->
+        <div class="col-2 superhero-sidebar">
+            <a href="" onclick="getDataFromAPI(event,id)" id='38'>Aquaman</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='14'>Alan Scott</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='70'>Batman</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='106'>Black Panther</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='149'>Captain America</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='156'>Captain Marvel</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='185'>Colossus</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='201'>Daredevil</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='213'>Deadpool</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='236'>Elastigirl</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='263'>Flash</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='346'>Iron Man</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='644'>Superman</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='643'>Supergirl</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='612'>Spawn</a>
+            <a href="" onclick="getDataFromAPI(event,id)" id='720'>Wonder Woman</a>
+        </div>
+        <!-- sideBar div end-->
+        <div class="col-4">
+          <img class="card-img-top superhero-image" src="" alt="Card image cap" id='image'>
+        </div>
+        <div class="col-6 superhero-display-info-area">
+          <div class="row">
+              <div class="col-12">
+            <div class="card text-center">
+              <div class="card-header superhero-card-header">
+                  BIOGRAPHY
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Full Name :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="full_name"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item superhero-card-row">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Alter Egos :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="alter_egos"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Aliases :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="aliases"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item superhero-card-row">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Place-of-Birth :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="birth_place"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              First-Appearance :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="appearance"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item superhero-card-row">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Publisher :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="publisher"></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-4 superhero-card-subtitle">
+                              Alignment :
+                          </div>
+                          <div class="col-6">
+                              <p class="card-title" id="alignment"></p>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        </div>
+        </br>
+          <div class="row">
+              <div class="col-4">
+                  <div class="card text-center">
+                      <div class="card-header superhero-card-header">
+                           POWERSTATS
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/strength.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="strength">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="strength"></p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item superhero-card-row">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/intelligence.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="intelligence">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="intelligence"></p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/speed.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="speed">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="speed"></p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item superhero-card-row">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/durability.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="durability">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="durability"></p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/power.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="power">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="power"></p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="list-group-item superhero-card-row">
+                              <div class="row">
+                                  <div class="col-6">
+                                      <img src="./assest/combat.png" alt="Bootstrap" width="32" height="32"
+                                           data-toggle="tooltip" data-placement="bottom" title="combat">
+                                  </div>
+                                  <div class="col-6">
+                                      <p class="card-title" id="combat"></p>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-8">
+                <div class="card text-center">
+                  <div class="card-header superhero-card-header">
+                     APPEARANCE
+                  </div>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Gender :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="gender"></p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item superhero-card-row">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Race :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="race"></p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Height :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="height"></p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item superhero-card-row">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Weight :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="weight"></p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Eye-Color :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="eye_color"></p>
+                              </div>
+                          </div>
+
+                      </li>
+                      <li class="list-group-item superhero-card-row">
+                          <div class="row">
+                              <div class="col-4 superhero-card-subtitle">
+                                  Hair-Color :
+                              </div>
+                              <div class="col-6">
+                                  <p class="card-title" id="hair_color"></p>
+                              </div>
+                          </div>
+                      </li>
+
+
+                  </ul>
+              </div>
+
+              </div>
+          </div>
+          </br>
+                  <div class="row">
+                      <div class="col-12">
+                      <div class="card text-center">
+                          <div class="card-header superhero-card-header">
+                              WORK
+                          </div>
+                          <ul class="list-group list-group-flush">
+
+                              <li class="list-group-item">
+                                  <div class="row">
+                                      <div class="col-4 superhero-card-subtitle">
+                                          Occupation :
+                                      </div>
+                                      <div class="col-6">
+                                          <p class="card-title" id="occupation"></p>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="list-group-item superhero-card-row">
+                                  <div class="row">
+                                      <div class="col-4 superhero-card-subtitle">
+                                          Base :
+                                      </div>
+                                      <div class="col-6">
+                                          <p class="card-title" id="base"></p>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                      </div>
+                  </div>
+                  </br>
+                  <div class="row">
+                      <div class="col-12">
+                      <div class="card text-center">
+                          <div class="card-header superhero-card-header">
+                              CONNECTIONS
+                          </div>
+                          <ul class="list-group list-group-flush">
+
+                              <li class="list-group-item">
+                                  <div class="row">
+                                      <div class="col-4 superhero-card-subtitle">
+                                          Group-Affiliation :
+                                      </div>
+                                      <div class="col-6">
+                                          <p class="card-title" id="affiliation"></p>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="list-group-item superhero-card-row">
+                                  <div class="row">
+                                      <div class="col-4 superhero-card-subtitle">
+                                          Relatives :
+                                      </div>
+                                      <div class="col-6">
+                                          <p class="card-title" id="relatives"></p>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script>
+</body>
+
+ 
+
+
+

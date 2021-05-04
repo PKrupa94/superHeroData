@@ -1,0 +1,82 @@
+.superhero-header {
+  background-color: #0b4068;
+  text-align: center;
+  border: 1px solid lightgray;
+  color: #8fcaf5;
+  height: 100px;
+  padding: 25px;
+}
+
+.superhero-image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100vh;
+}
+
+h1 {
+  animation: pop-in 3s alternate;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+    text-shadow: 2px 2px 5px lightgray;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.superhero-sidebar,
+.superhero-display-info-area {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; /* for scrolling sidebar */
+}
+
+.superhero-sidebar {
+  background-color: #0b4068;
+}
+
+.superhero-sidebar a {
+  padding: 6px 8px 6px 25px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #8fcaf5;
+  display: block;
+}
+
+.superhero-sidebar a:hover {
+  color: #a8bce2;
+  text-shadow: 2px 2px 4px lightslategrey; /*h v redius color*/
+}
+
+a:focus {
+  color: #85f904;
+  font-weight: bold;
+  outline: 0;
+  border: none;
+}
+
+.superhero-card-header {
+  background-color: #40850d;
+  color: #f9fefe;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.superhero-card-row {
+  background-color: #eeee;
+}
+
+.superhero-card-subtitle {
+  color: #0a010e;
+  font-weight: bold;
+}
