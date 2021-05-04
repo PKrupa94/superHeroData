@@ -1,8 +1,8 @@
 function getDataFromAPI(event, id) {
-  const ANIMAL_URL = `https://www.superheroapi.com/api.php/{userToken here}/${id}`;
+  const superHero_Url = `https://www.superheroapi.com/api.php/{userToken here}/${id}`;
   event.preventDefault();
   const displayImage = document.getElementById("image")
-  const promise = fetch(ANIMAL_URL);
+  const promise = fetch(superHero_Url);
 
   promise
     .then(function (response) {
